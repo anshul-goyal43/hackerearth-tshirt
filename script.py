@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
-import time
+from time import sleep
 
 driver = webdriver.Firefox()
 driver.get("http://www.hackerearth.com")
@@ -18,12 +18,7 @@ login2 = driver.find_element_by_class_name('submitButton_uHU80')
 
 ActionChains(driver).click(login2).perform()
 
-time.sleep(10)
-newURl = driver.window_handles[0]
-driver.switch_to.window(newURl)
-
-time.sleep(10)
+sleep(10)
 con = driver.find_element_by_link_text('PRACTICE')
 
 ActionChains(driver).click(con).perform()
-
