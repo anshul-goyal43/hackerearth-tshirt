@@ -22,3 +22,8 @@ sleep(10)
 con = driver.find_element_by_link_text('PRACTICE')
 
 ActionChains(driver).click(con).perform()
+
+sleep(10)
+
+driver.get("https://hackerearth.com/practice/algorithms/")
+
